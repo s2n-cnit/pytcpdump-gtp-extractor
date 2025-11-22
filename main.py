@@ -8,7 +8,7 @@ from clize import parameters
 
 def capture(*,
             iface: ('i', parameters.multi(min=0)),  # noqa: F821
-            filter: str = '',  # noqa: F821
+            filter: 'f' = '',  # noqa: F821
             output: 'w' = None,  # noqa: F821
             logging: 'l' = False):  # noqa: F821
     """
