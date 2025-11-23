@@ -42,7 +42,11 @@ def capture(*,
     :param duration: duration of the capture in seconds (0 = infinite).
     :param logging: enable logging of captured packets.
     :param move_to_scp_path: SCP path to move the output pcap after capture.
-    :param move_to_nfs: move the output pcap to NFS path after capture.
+    :param move_to_scp_server: SCP server address.
+    :param move_to_scp_port: SCP server port.
+    :param move_tp_scp_username: SCP username.
+    :param move_to_scp_password: SCP password.
+    :param move_to_nfs_path: move the output pcap to NFS path after capture.
     """
     if len(iface) == 0:
         iface = get_if_list()

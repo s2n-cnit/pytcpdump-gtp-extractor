@@ -61,24 +61,36 @@ poetry install
 > The script will initialize the Manager, load the configurations, and start the swarm of traffic generators as parallel worker processes.
 
 ```shell
-python profiled-swarm.py --config manager.toml.
+python pytcpdump-gtp-generator.py -i eth0 -i eth2 -f 'icmp' -w test.pcap -l -p /home/ubuntu/ -s 192.168.13.3 -o 22 -u ubuntu -a password
+.
 ```
-
-> [!IMPORTANT]
-> Upon execution, the Manager will print its status, and each running generator will log its activity, including the start time, the profile it is executing, and any errors encountered during packet transmission.
 
 > [!TIP]
 > Use the --help flag for additional command-line options:
 
 ```shell
-python profiled-swarm.py --help
+python pytcpdump-gtp-extractor.py --help
 
 # Example Output:
-# usage: pytcpdump-gtp-extractor.py [-h]
+# usage: pytcpdump-gtp-extractor.py [OPTIONS]
 #
-# optional arguments:
-#   -h, --help            show this help message and exit
-#   --config CONFIG_PATH  Specify the path to the manager configuration file. (default: manager.toml)
+# Captures network traffic on specified interfaces with an optional filter and save to the file if provided.
+#
+# Options:
+#   -i, --iface=STR                  interfaces to sniff the traffic.
+#   -f, --filter=STR                 tcpdump / bpf filter. (default: )
+#   -w, --output=STR                 output pcap file to save captured packets.
+#   -d, --duration=INT               duration of the capture in seconds (0 = infinite). (default: 0)
+#   -l, --logging                    enable logging of captured packets.
+#   -p, --move-to-scp-path=STR       SCP path to move the output pcap after capture.
+#   -s, --move-to-scp-server=STR     SCP server address.
+#   -o, --move-to-scp-port=STR       SCP server port.
+#   -u, --move-tp-scp-username=STR   SCP username.
+#   -a, --move-to-scp-password=STR   SCP password.
+#   -m, --move-to-nfs-path=STR       move the output pcap to NFS path after capture.
+
+# Other actions:
+#   -h, --help                       Show the help
 ```
 
 # License
@@ -88,6 +100,5 @@ python profiled-swarm.py --help
 
 > [!TIP]
 > See the LICENSE file for details.
-
 
 [^1]: GPRS Tunneling Protocol
