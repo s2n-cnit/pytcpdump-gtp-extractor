@@ -37,7 +37,7 @@ def capture(*,
     filter and save to the file if provided.
 
     :param iface: interfaces to sniff the traffic.
-    :param filter: tcpdump / bpf filter.
+    :param filter: tcpdump / bpf filter (default no filter).
     :param output: output pcap file to save captured packets.
     :param duration: duration of the capture in seconds (0 = infinite).
     :param logging: enable logging of captured packets.

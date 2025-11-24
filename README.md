@@ -47,18 +47,16 @@ poetry install
 
 3. Activate the virtual environment:
 
-   ```shell
-   poetry shell
-   ```
+```shell
+poetry shell
+```
 
-    Once activated, you can execute profiled-swarm.py directly, knowing that all required packages are available and properly configured.
+> [!TIP]
+> Once activated, you can execute profiled-swarm.py directly, knowing that all required packages are available and properly configured.
 
 ## Usage
 
-1. Run the GeneratorExecute the main script.
-
-> [!NOTE]
-> The script will initialize the Manager, load the configurations, and start the swarm of traffic generators as parallel worker processes.
+Run the the main script.
 
 ```shell
 python pytcpdump-gtp-generator.py -i eth0 -i eth2 -f 'icmp' -w test.pcap -l -p /home/ubuntu/ -s 192.168.13.3 -o 22 -u ubuntu -a password
@@ -66,9 +64,13 @@ python pytcpdump-gtp-generator.py -i eth0 -i eth2 -f 'icmp' -w test.pcap -l -p /
 ```
 
 > [!TIP]
-> Use the --help flag for additional command-line options:
+> Use the -h|-help flag for additional command-line options:
 
 ```shell
+python pytcpdump-gtp-extractor.py --h
+
+# or
+
 python pytcpdump-gtp-extractor.py --help
 
 # Example Output:
@@ -78,7 +80,7 @@ python pytcpdump-gtp-extractor.py --help
 #
 # Options:
 #   -i, --iface=STR                  interfaces to sniff the traffic.
-#   -f, --filter=STR                 tcpdump / bpf filter. (default: )
+#   -f, --filter=STR                 tcpdump / bpf filter. (default: no filter)
 #   -w, --output=STR                 output pcap file to save captured packets.
 #   -d, --duration=INT               duration of the capture in seconds (0 = infinite). (default: 0)
 #   -l, --logging                    enable logging of captured packets.
