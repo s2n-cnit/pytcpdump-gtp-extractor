@@ -59,7 +59,7 @@ poetry shell
 Run the the main script.
 
 ```shell
-python pytcpdump-gtp-generator.py -i eth0 -i eth2 -f 'icmp' -w test.pcap -l -p /home/ubuntu/ -s 192.168.13.3 -o 22 -u ubuntu -a password
+python pytcpdump-gtp-extractor.py -i eth0 -i eth2 -f 'icmp' -w test.pcap -l -p /home/ubuntu/ -s 192.168.13.3 -o 22 -u ubuntu -a password
 .
 ```
 
