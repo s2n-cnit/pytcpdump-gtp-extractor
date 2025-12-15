@@ -8,7 +8,5 @@ license = {text = "MIT"}
 dependencies = [
     "scapy~=2.6.1",
     "clize~=5.0.2",
-    "loguru~=0.7.3",
-    "paramiko~=4.0.0",
-    "scp~=0.15.0"
+    "loguru~=0.7.3"
 ]
