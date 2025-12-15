@@ -8,12 +8,12 @@ license = {text = "MIT"}
 
 # Standard dependencies array (used by uv pip install -e .)
 dependencies = [
-    "python=^3.11",
-    "scapy=^2.6.1",
-    "clize=^5.0.2",
-    "loguru=^0.7.3",
-    "paramiko=^4.0.0",
-    "scp=^0.15.0"
+    "python~=3.11",
+    "scapy~=2.6.1",
+    "clize~=5.0.2",
+    "loguru~=0.7.3",
+    "paramiko~=4.0.0",
+    "scp~=0.15.0"
 ]
 
 [tool.poetry]
