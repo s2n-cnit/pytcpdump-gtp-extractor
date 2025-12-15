@@ -4,7 +4,6 @@ from scapy.contrib.gtp import GTPPDUSessionContainer
 from clize import run
 from log import logger
 from clize import parameters
-import shutil
 
 
 def capture(*,
@@ -52,12 +51,6 @@ def capture(*,
             writer.close()
             logger.info(f"Packet capture saved to {output}")
         logger.info(f"Total packets captured: {num_pkts_captured}")
-        if move_to_scp_path and output:
-            scp_client.put(output, move_to_scp_path)
-            logger.info(f"Moved pcap to SCP path: {move_to_scp_path}")
-        if move_to_nfs_path and output:
-            shutil.move(output, move_to_nfs_path)
-            logger.info(f"Moved pcap to NFS path: {move_to_nfs_path}")
 
 
 if __name__ == "__main__":
