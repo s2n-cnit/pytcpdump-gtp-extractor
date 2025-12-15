@@ -3,10 +3,8 @@ name = "pytcpdump-gtp-extractor"
 version = "0.1.0"
 description = "Simple version of tcpdump developed using Python and scapy that enable the extraction of GPT-U tunnel encapsulation"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 license = {text = "MIT"}
-
-# Standard dependencies array (used by uv pip install -e .)
 dependencies = [
     "scapy~=2.6.1",
     "clize~=5.0.2",
@@ -14,24 +12,3 @@ dependencies = [
     "paramiko~=4.0.0",
     "scp~=0.15.0"
 ]
-
-[tool.poetry]
-name = "pytcpdump-gtp-extractor"
-version = "0.1.0"
-description = "Simple version of tcpdump developed using Python and scapy that enable the extraction of GPT-U tunnel encapsulation"
-authors = ["Alex Carrega <alessandro.carrega@unige.it>"]
-license = "MIT"
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "3.11"
-scapy = "^2.6.1"
-clize = "^5.0.2"
-loguru = "^0.7.3"
-paramiko = "^4.0.0"
-scp = "^0.15.0"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
